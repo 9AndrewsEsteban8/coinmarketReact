@@ -1,70 +1,12 @@
-# Getting Started with Create React App
+Documentación Marketcoin React API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Para empezar se creó un proyecto de creo de React; en el cual se adicionaron dos componentes principales; el primero TableCoin donde se generas los encabezados de la tabla, un filtro para buscar las criptomonedas, por medio del método map se genera una nueva columna en la tabla para mostrar todos los títulos guardados en un array; esto en el head de la tabla; en el body se  importa un componente llamado CoinRow; el cual permite la adición de cada criptomoneda generada por la obtención de la información de la API.
 
-## Available Scripts
+Para el componente CoinRow se realiza el consumo de la API de la siguiente manera. Se crea una nueva fila que a su vez contiene las columnas con la información de cada moneda; por ejemplo para la primera columna se utiliza el Template Literals {coin.image} para obtener la imagen de la criptomoneda. En la creación de este componente de utilizas los props coin e index que se generan desde el archivo App.JS.
 
-In the project directory, you can run:
+Finalmente, en el APP.js se crea una función asíncrona que obtiene toda la información de la API y la almacena en la constante res. Se llama el componente TableCoin.
 
-### `npm start`
+Para los estilos se utilizó la biblioteca Bootstrap para darle el fondo de color claro a la tabla; un margen y un hover que permite al usuario diferenciar con el mouse la selección de cada moneda.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+En el archivo index.css se generaron los estilos del body con un fondo negro y un color blanco para los textos y para el input un fondo gris y en texto alineado en el centro.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
